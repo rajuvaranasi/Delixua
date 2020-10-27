@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage ('package stage') {
             steps {
-			node ('buildagent') {
+			node ('master') {
                            sh label: '', script: 'sudo mvn clean package'
 		   }
 			              
